@@ -10,8 +10,6 @@ MEIC清单是由清华大学MEIC团队经至下而上的调查，统计得出的
 
 # meic_asc_to_tiff.pro
 
-## 介绍
-
 MEIC清单的数据默认提供三种方式，分别是Netcdf格式、ASCII格式以及...（忘了）。
 
 但三种不同格式的数据仅在格式上有所不同，其数据内容均完全一致。
@@ -33,6 +31,7 @@ outdir='E:\pythonProject\projectData\CMAQ\MEIC清单\201707\'
       若有需求对命名进行修改.参考：
       ```
         write_tiff,outdir+file_basename(intfile,'.asc')+'.tif',data,/float,geotiff=geo_info
+        
         print,outdir+file_basename(intfile,'.asc')+'.tif'
       ```
-      其中，`<outdir+file_basename(intfile,'.asc')+'.tif'>`为输出文件名称，在此处进行命名自定义即可。
+      其中，`outdir+file_basename(intfile,'.asc')+'.tif'为输出文件名称，在此处进行命名自定义即可。
