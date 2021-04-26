@@ -31,7 +31,6 @@ outdir='E:\pythonProject\projectData\CMAQ\MEIC清单\201707\'
       若有需求对命名进行修改.参考：
       ```
         write_tiff,outdir+file_basename(intfile,'.asc')+'.tif',data,/float,geotiff=geo_info
-        
         print,outdir+file_basename(intfile,'.asc')+'.tif'
       ```
       其中，`outdir+file_basename(intfile,'.asc')+'.tif'为输出文件名称，在此处进行命名自定义即可。
