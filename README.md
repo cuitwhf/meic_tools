@@ -37,4 +37,6 @@ write_tiff,outdir+file_basename(intfile,'.asc')+'.tif',data,/float,geotiff=geo_i
      
 print,outdir+file_basename(intfile,'.asc')+'.tif'
 ```
-其中，`outdir+file_basename(intfile,'.asc')+'.tif'为输出文件名称，在此处进行命名自定义即可。
+其中，`outdir+file_basename(intfile,'.asc')+'.tif'`为输出文件名称，在此处进行命名自定义即可。
+
+Note:输出文件均为WGS-84等经纬度投影方式。
