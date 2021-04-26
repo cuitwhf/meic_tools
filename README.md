@@ -29,10 +29,9 @@ outdir='E:\pythonProject\projectData\CMAQ\MEIC清单\201707\'
     1.*intdir*：该参数为MEIC清单的ASCII码文件所在的目录。后缀名为'.asc'.程序将依据asc来对目录中的文件进行查找并处理，因此需确保该目录中不含有以.asc结尾的其他文件。
     2.*outdir*：该参数为处理后的Geotiff输出目录，所有文件的名称默认以原始名称的Basename.tif进行命名.
       若有需求对命名进行修改.参考：
-      ```
-        write_tiff,outdir+file_basename(intfile,'.asc')+'.tif',data,/float,geotiff=geo_info
-      ```
-      ```
-        print,outdir+file_basename(intfile,'.asc')+'.tif'
-      ```
-      其中，`outdir+file_basename(intfile,'.asc')+'.tif'为输出文件名称，在此处进行命名自定义即可。
+```
+write_tiff,outdir+file_basename(intfile,'.asc')+'.tif',data,/float,geotiff=geo_info
+     
+print,outdir+file_basename(intfile,'.asc')+'.tif'
+```
+其中，`outdir+file_basename(intfile,'.asc')+'.tif'为输出文件名称，在此处进行命名自定义即可。
