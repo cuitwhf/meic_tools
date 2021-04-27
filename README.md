@@ -53,11 +53,17 @@ Note:输出文件均为WGS-84等经纬度投影方式。
 程序输入区位于程序头部，如下：
 ```
 ;pollution_name.污染物名称
+
 ;目前MEIC清单中的污染物共包含:
+
 ;BC.CB05_ALD2.CB05_ETH.CB05_ETHA.CB05_ETOH
+
 ;CB05_FORM.CB05_IOLE.CB05_ISOP.CB05_MEOH.CB05_NVOL.CB05_OLE.CB05_PAR
+
 ;CB05_TERP.CB05_TOL.CB05_UNR.CB05_XYL.CO.CO2.NH3.NOx.OC.PM2.5.PMcoarse.SO2.VOC
+
 ;ISAT所需污染物.SO2.NOx.VOC.CO.PM2.5.PM10.NH3
+
 pollution_name=['SO2','NOx','VOC','CO','PM25','PMcoarse','NH3']
 ```
 此处为需要处理的污染物名称，程序将逐个处理设置的污染物。该处参数在文件中的具体作用是根据设置参数寻找相同污染物的Geotiff文件，具体代码如下：
@@ -67,6 +73,7 @@ file_list=file_search(intdir,'*'+outname[outname_i]+'*'+pollution_name[pollution
 注释中列举了所有的MEIC清单污染物以及ISAT所需的污染物。
 ```
 ;intdir.MEIC清单目录.本清单是经过处理后的TIFF文件
+
 intdir='F:\pythonProject\projectData\CMAQ\MEIC清单\201701\'
 ```
 此参数默认应与`meic_asc_to_tiff.pro`程序中的**outdir**参数相同。
@@ -74,7 +81,9 @@ intdir='F:\pythonProject\projectData\CMAQ\MEIC清单\201701\'
 该目录中的文件是经处理后的Geotiff格式的清单网格文件。
 ```
 ;distribution_dir.分配文件目录.此分配文件为由ISAT分配产生的CSV文件
+
 distribution_dir='F:\pythonProject\projectData\CMAQ\空间分配因子\'
+
 distribution_file=['移动源空间分配因子.csv','农业源空间分配因子.csv','居民源空间分配因子.csv','工业源空间分配因子.csv','工业源空间分配因子.csv']
 ```
 *distribution_dir*为ISAT产生的分配文件(.csv)存放的目录。
@@ -90,6 +99,7 @@ file_list=file_search(intdir,'*'+outname[outname_i]+'*'+pollution_name[pollution
 
 ```
 ;grid_file.网格文件.由MCIP产生的GRIDCRO2D文件.用于获取网格信息
+
 grid_file='F:\ISAT\dist\src\met\GRIDCRO2D.nc'
 ```
 *grid_file*：主要用于从GRIDCRO2D.nc文件中获取经纬度信息，用户网格位置的查找。
@@ -97,7 +107,9 @@ grid_file='F:\ISAT\dist\src\met\GRIDCRO2D.nc'
 ```
 ;outdir.输出文件目录
 outdir='F:\pythonProject\projectData\CMAQ\空间分配因子\污染物核算结果\201701\'
+
 ;outname.输出文件名称[department] [transportation|agriculture|residential|industry|power]
+
 outname=['transportation','agriculture','residential','industry','power']
 ```
 
@@ -115,16 +127,19 @@ outname=['transportation','agriculture','residential','industry','power']
 
 ```
 ;Step.2输出文件目录
+
 clac_outdir='G:\pythonProject\projectData\CMAQ\空间分配因子\污染物核算结果\201707\'
 ```
 *clac_outdir*为**meic_emissions_grib_calc.pro**的输出文件所在目录，请确保该目录中不含有**meic_emissions_grib_calc.pro**的输出文件以外的其他文件，以免程序出错。
 ```
 ;输出目录
+
 output_dir='G:\pythonProject\projectData\CMAQ\空间分配因子\污染物核算结果\201707\'
 ```
 *output_dir*为输出文件目录，输出文件将以***Total_[pollution].txt***的形式在目录中进行命名。
 ```
 ;污染物名称 用于查询文件路径
+
 pollution_name=['SO2','NOx','VOC','CO','PM25','PMcoarse','NH3']
 ```
 *pollution_name*:需要统计的污染物种类，程序将根据此参数对**meic_emissions_grib_calc.pro**输出文件进行查找。
