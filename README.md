@@ -19,10 +19,15 @@ MEIC清单的数据默认提供三种方式，分别是Netcdf格式、ASCII格�
 脚本输入区在pro开头，如下：
 ```
 ;程序说明.此程序将从网站获取的asc格式的MEIC清单文件转换为栅格格式。
+
 ;Step.1
+
 ;asc文件所在目录
+
 intdir='E:\pythonProject\projectData\CMAQ\MEIC清单\2017清单'
+
 ;tif文件输出目录
+
 outdir='E:\pythonProject\projectData\CMAQ\MEIC清单\201707\'
 ```
 共有两个输入参数：
