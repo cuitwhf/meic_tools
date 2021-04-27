@@ -144,3 +144,7 @@ output_dir='G:\pythonProject\projectData\CMAQ\空间分配因子\污染物核算
 pollution_name=['SO2','NOx','VOC','CO','PM25','PMcoarse','NH3']
 ```
 *pollution_name*:需要统计的污染物种类，程序将根据此参数对**meic_emissions_grib_calc.pro**输出文件进行查找。
+
+## run_isatm.pro
+
+该工具自动生成ISAT.M所需的文件，如.减排网格数据.面源总量数据.并调用ISAT.M生成可以直接使用的CMAQ清单。
