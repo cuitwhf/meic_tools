@@ -78,7 +78,7 @@ distribution_file=['移动源空间分配因子.csv','农业源空间分配因�
 
 示例表明，程序将用*移动源空间分配因子.csv*中的数据处理以*transportation*为前缀的排放因子网格；以*农业源空间分配因子.csv*中的数据处理以*agriculture*为前缀的排放因子网格，以此类推。
 
-具体的网格搜寻代码如下：
+具体的网格文件搜寻代码如下：
 ```
 file_list=file_search(intdir,'*'+outname[outname_i]+'*'+pollution_name[pollution_i]+'.tif',count=count)
 ```
@@ -86,11 +86,19 @@ file_list=file_search(intdir,'*'+outname[outname_i]+'*'+pollution_name[pollution
 ```
 ;grid_file.网格文件.由MCIP产生的GRIDCRO2D文件.用于获取网格信息
 grid_file='F:\ISAT\dist\src\met\GRIDCRO2D.nc'
+```
+*grid_file*：主要用于从GRIDCRO2D.nc文件中获取经纬度信息，用户网格位置的查找。
+
+```
 ;outdir.输出文件目录
 outdir='F:\pythonProject\projectData\CMAQ\空间分配因子\污染物核算结果\201701\'
 ;outname.输出文件名称[department] [transportation|agriculture|residential|industry|power]
 outname=['transportation','agriculture','residential','industry','power']
-;grid_resolution.网格分辨率
-;grid_resolution=0.03
 ```
+
+输出文件的设置由*outdir*和*outname*进行控制。输出文件为文本文件(.txt)，包含网格id，经度，纬度，分配后总量信息。
+
+*outdir*为输出文件的目录。
+
+*outname*为输出文件的前缀，后面会接污染物种类。*outname*需与输入文件的前缀保持一致。
 
