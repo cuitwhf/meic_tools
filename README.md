@@ -106,6 +106,7 @@ grid_file='F:\ISAT\dist\src\met\GRIDCRO2D.nc'
 
 ```
 ;outdir.输出文件目录
+
 outdir='F:\pythonProject\projectData\CMAQ\空间分配因子\污染物核算结果\201701\'
 
 ;outname.输出文件名称[department] [transportation|agriculture|residential|industry|power]
