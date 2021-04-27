@@ -102,3 +102,24 @@ outname=['transportation','agriculture','residential','industry','power']
 
 *outname*为输出文件的前缀，后面会接污染物种类。*outname*需与输入文件的前缀保持一致。
 
+## meic_merge.pro
+
+**meic_emissions_grib_calc.pro**分部门输出txt，如果跳过**meic_merge.pro**直接运行**run_isatm.pro**则会按部门对分配结果进行处理，输出不同部门的排放因子。
+
+**meic_merge.pro**通过对**meic_emissions_grib_calc.pro**分部门输出的结果(.txt)进行统计，将各部门在每个网格的分配总量进行汇总，输出为与**meic_emissions_grib_calc.pro**输出格式一致的文件，以便用于**run_isatm.pro**使用。
+
+```
+;Step.2输出文件目录
+clac_outdir='G:\pythonProject\projectData\CMAQ\空间分配因子\污染物核算结果\201707\'
+```
+*clac_outdir*为**meic_emissions_grib_calc.pro**的输出文件所在目录，请确保该目录中不含有**meic_emissions_grib_calc.pro**的输出文件以外的其他文件，以免程序出错。
+```
+;输出目录
+output_dir='G:\pythonProject\projectData\CMAQ\空间分配因子\污染物核算结果\201707\'
+```
+*output_dir*为输出文件目录，输出文件将以***Total_[pollution].txt***的形式在目录中进行命名。
+```
+;污染物名称 用于查询文件路径
+pollution_name=['SO2','NOx','VOC','CO','PM25','PMcoarse','NH3']
+```
+*pollution_name*:需要统计的污染物种类，程序将根据此参数对**meic_emissions_grib_calc.pro**输出文件进行查找。
