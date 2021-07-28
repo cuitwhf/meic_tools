@@ -8,9 +8,9 @@ MEIC清单是由清华大学MEIC团队经至下而上的调查，统计得出的
 
 工具包括4中基本工具："meic_asc_to_tiff.pro","meic_emissions_grib_calc.pro","meic_merge.pro","run_isatm.pro"
 
-本软件由成都信息工程大学资源环境学院 王浩帆、张洋、刘志红等人开发。
+***本软件由成都信息工程大学资源环境学院 王浩帆、张洋、刘志红等人开发。***
 
-------联系方式：cuitwhf@gmail.com
+***------联系方式：cuitwhf@gmail.com***
 
 ## meic_asc_to_tiff.pro
 
