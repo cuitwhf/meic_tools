@@ -22,13 +22,17 @@
 
 具体是怎样匹配的可以采用***meic_nc_to_tiff.pro***查看，输出的TIFF含有一个**index.tiff**和一个**a.tiff**
 
-其中**index.tiff**便是编号，但是再使用此编号以前，确定**a.tiff**具有正确的空间分布情况。
+其中**index.tiff**中的编号对应MEIC清单NC文件中的索引，但是再使用此编号以前，确定**a.tiff**具有正确的空间分布情况。
 
-![image][https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/agriculture_NH3_value.png]
+![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/agriculture_NH3_value.png)
 
-**index.tiff**中的编号对应MEIC清单NC文件中的索引。
+如图所示，我们发现现在的**a.tiff**文件具有正确的空间分布。接下来我们需要核对**index.tiff**中的数值是否和“NAME”是一一对应的关系。
 
 启用ArcGIS中的“识别”工具，点击网格中的某点。若“NAME”和**index.tiff**的索引相同，则说明不需要进行进一步的处理，可以直接跳入第三步。
+
+具体操作步骤见下图。
+
+![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/grid_judge.png)
 
 
 # 第三步：
