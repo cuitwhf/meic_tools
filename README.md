@@ -24,6 +24,8 @@
 
 其中**index.tiff**便是编号，但是再使用此编号以前，确定**a.tiff**具有正确的空间分布情况。
 
+![image][https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/agriculture_NH3_value.png]
+
 **index.tiff**中的编号对应MEIC清单NC文件中的索引。
 
 启用ArcGIS中的“识别”工具，点击网格中的某点。若“NAME”和**index.tiff**的索引相同，则说明不需要进行进一步的处理，可以直接跳入第三步。
