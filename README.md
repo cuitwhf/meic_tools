@@ -60,4 +60,7 @@
 
 最后采用连接字段重新对NAME和ID赋值即可。
 
-# 第三步：
+# 第三步：道路源分配 主要用于交通源
+
+![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/多区域线数据分配.png)
+
