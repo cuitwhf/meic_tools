@@ -8,6 +8,10 @@
 
 清单网格的创建基于MCIP模型所输出的**GRIDDESC**来进行。
 
+操作步骤如图所示：
+
+![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/生成网格.png)
+
 具体的操作方式在ISAT的手册中有具体描写。
 
 # 第二步：使用“NC转网格”功能矢量化MEIC清单
@@ -15,6 +19,16 @@
 此处转换出来的清单属性表中包含“ID”和“NAME”字段。
 
 **Note:此处的转换流程可以在"ISATv2018.pdf"的Page 8中可以看到**
+
+具体操作如图所示：
+
+![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/NC转网格.png)
+
+由于ISAT的视图界面还存在一些小问题，因此，我们后续的一些工作采用Arcmap来进行。
+
+如图所示为Arcmap的显示结果：
+
+![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/Arcgis视图.png)
 
 此处的“NAME”字段需要先删除，再新建“NAME”字段（文本型，长度10）。
 
@@ -26,15 +40,8 @@
 
 ![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/agriculture_NH3_value.png)
 
-如图所示，我们发现现在的**a.tiff**文件具有正确的空间分布。接下来我们需要核对**index.tiff**中的数值是否和“NAME”是一一对应的关系。
+如图所示，MEIC数据在NC中的编号，与ISAT转换出来的编号不是一一对应的。
 
-当然了，如果不是一一对应，你就想办法让他对应起来就可以了。ARCGIS里面的工具有很多可以做的。
-
-启用ArcGIS中的“识别”工具，点击网格中的某点。若“NAME”和**index.tiff**的索引相同，则说明不需要进行进一步的处理，可以直接跳入第三步。
-
-具体操作步骤见下图。
-
-![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/grid_judge.png)
-
+![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/判断编号对应关系.png)
 
 # 第三步：
