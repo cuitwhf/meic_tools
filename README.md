@@ -44,4 +44,20 @@
 
 ![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/判断编号对应关系.png)
 
+此时，我们要对编号进行校正。
+
+首先，使用**栅格转点**工具，将***index.tiff***转为点，如图所示。
+
+![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/栅格转点.png)
+
+然后采用**值提取至点**工具，将***index.tiff***中的值，提取到上一步点要素的字段中。
+
+![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/值提取至点.png)
+
+然后采用**空间连接**工具，将编号属性连接出来。
+
+![image](https://github.com/cuitwhf/meic_tools/blob/MEICT-2.0/png/空间连接.png)
+
+最后采用连接字段重新对NAME和ID赋值即可。
+
 # 第三步：
